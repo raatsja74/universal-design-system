@@ -1,0 +1,19 @@
+/**
+ * Universal Design System — LeadBolt theme (leadbolt).
+ * Generated from themes/leadbolt.json. Maps only approved semantic roles.
+ * Apply by setting data-uds-theme="leadbolt" on a parent (typically html).
+ */
+[data-uds-theme="leadbolt"] {
+  --uds-theme-font-body: "DM Sans", sans-serif;
+  --uds-theme-font-heading: Outfit, sans-serif;
+  --uds-theme-font-mono: ui-monospace, monospace;
+  --uds-color-text-primary: #111827;
+  --uds-color-text-secondary: #2662D9;
+  --uds-color-text-inverse: #FFFFFF;
+  --uds-color-action-primary: #FF5C00;
+  --uds-color-action-primaryText: #FFFFFF;
+  --uds-color-border-subtle: #2662D9;
+  --uds-color-focus-ring: #FF5C00;
+  --uds-surface-canvas: #FFFFFF;
+  --uds-surface-elevated: #FFFFFF;
+}

@@ -1,9 +1,10 @@
 {
   "name": "@jadenraats/universal-design-system",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "validate": "node scripts/validate-tokens.mjs"
+    "validate": "node scripts/validate-tokens.mjs",
+    "export:css": "node scripts/export-css.mjs"
   }
 }

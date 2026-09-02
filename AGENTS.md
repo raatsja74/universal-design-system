@@ -16,3 +16,7 @@ This repository is the canonical implementation contract for reusable foundation
 
 Run `npm run validate` after changing token JSON. It enforces required semantic roles, 4px spacing increments, and valid theme references.
 
+
+## Generated CSS
+
+Do not hand-edit dist/. Map only approved semantic roles in themes JSON. Core CSS must not ship a project palette as the default. The validate script regenerates dist/ from JSON.

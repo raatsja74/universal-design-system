@@ -2,7 +2,7 @@
   "$schema": "https://design-tokens.github.io/community-group/format/",
   "meta": {
     "name": "Universal foundation tokens",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "status": "approved-v0"
   },
   "spacing": {

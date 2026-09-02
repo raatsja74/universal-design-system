@@ -1,0 +1,19 @@
+/**
+ * Universal Design System — AI Ledger theme (ai-ledger).
+ * Generated from themes/ai-ledger.json. Maps only approved semantic roles.
+ * Apply by setting data-uds-theme="ai-ledger" on a parent (typically html).
+ */
+[data-uds-theme="ai-ledger"] {
+  --uds-theme-font-body: "DM Sans", sans-serif;
+  --uds-theme-font-heading: Outfit, sans-serif;
+  --uds-theme-font-mono: ui-monospace, monospace;
+  --uds-color-text-primary: #FFFFFF;
+  --uds-color-text-secondary: #00F2FE;
+  --uds-color-text-inverse: #0B0F19;
+  --uds-color-action-primary: #00F2FE;
+  --uds-color-action-primaryText: #0B0F19;
+  --uds-color-border-subtle: #00F2FE;
+  --uds-color-focus-ring: #00F2FE;
+  --uds-surface-canvas: #0B0F19;
+  --uds-surface-elevated: #0B0F19;
+}

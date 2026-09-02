@@ -1,0 +1,19 @@
+/**
+ * Universal Design System — Jaden Raats theme (jadenraats).
+ * Generated from themes/jadenraats.json. Maps only approved semantic roles.
+ * Apply by setting data-uds-theme="jadenraats" on a parent (typically html).
+ */
+[data-uds-theme="jadenraats"] {
+  --uds-theme-font-body: "Instrument Sans", sans-serif;
+  --uds-theme-font-heading: "Instrument Sans", sans-serif;
+  --uds-theme-font-mono: "IBM Plex Mono", monospace;
+  --uds-color-text-primary: rgb(30 27 21);
+  --uds-color-text-secondary: rgb(108 100 87);
+  --uds-color-text-inverse: rgb(244 239 230);
+  --uds-color-action-primary: rgb(191 87 49);
+  --uds-color-action-primaryText: rgb(244 239 230);
+  --uds-color-border-subtle: rgb(30 27 21 / 0.2);
+  --uds-color-focus-ring: rgb(191 87 49);
+  --uds-surface-canvas: rgb(244 239 230);
+  --uds-surface-elevated: rgb(236 229 216);
+}

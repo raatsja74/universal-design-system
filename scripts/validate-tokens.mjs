@@ -1,22 +1,45 @@
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { cssVar, exportCss } from "./export-css.mjs";
 
-const root = new URL("..", import.meta.url).pathname;
+const root = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const core = JSON.parse(await readFile(path.join(root, "tokens/core.json"), "utf8"));
 const themesDir = path.join(root, "themes");
 const requiredRoles = Object.keys(core.semantic);
+const requiredTypeSlots = Object.keys(core.typography);
+
+if (core.layout.touchTargetMin.value !== "44px") {
+  throw new Error("layout.touchTargetMin must remain 44px");
+}
 
 for (const [name, token] of Object.entries(core.spacing)) {
   const px = Number.parseInt(token.value, 10);
   if (!Number.isInteger(px) || px % 4 !== 0) throw new Error(`spacing.${name} must be a 4px increment`);
 }
 
-for (const file of await readdir(themesDir)) {
-  if (!file.endsWith(".json")) continue;
+const themeFiles = (await readdir(themesDir)).filter((file) => file.endsWith(".json"));
+for (const file of themeFiles) {
   const theme = JSON.parse(await readFile(path.join(themesDir, file), "utf8"));
+  for (const slot of requiredTypeSlots) {
+    if (!theme.typography?.[slot]) throw new Error(`${file} is missing typography.${slot}`);
+  }
   for (const role of requiredRoles) {
     if (!theme.semantic?.[role]) throw new Error(`${file} is missing ${role}`);
   }
+  const extra = Object.keys(theme.semantic).filter((role) => !requiredRoles.includes(role));
+  if (extra.length) {
+    throw new Error(`${file} maps unapproved semantic roles: ${extra.join(", ")}`);
+  }
 }
 
-console.log(`Validated ${requiredRoles.length} semantic roles across ${(await readdir(themesDir)).filter(f => f.endsWith(".json")).length} themes.`);
+const { themes } = await exportCss();
+const coreCss = await readFile(path.join(root, "dist/uds.core.css"), "utf8");
+for (const role of requiredRoles) {
+  if (!coreCss.includes(cssVar(role))) {
+    throw new Error(`core CSS is missing ${cssVar(role)}`);
+  }
+}
+
+console.log(`Validated ${requiredRoles.length} semantic roles across ${themeFiles.length} themes.`);
+console.log(`Exported core CSS and ${themes} theme stylesheets to dist/.`);

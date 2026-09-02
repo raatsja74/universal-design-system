@@ -1,0 +1,44 @@
+/**
+ * Universal Design System — core semantic custom-property template.
+ * Generated from tokens/core.json. Do not edit by hand.
+ * Load one theme stylesheet after this file. Core does not ship a project palette.
+ */
+:root {
+  --uds-space-1: 4px;
+  --uds-space-2: 8px;
+  --uds-space-3: 12px;
+  --uds-space-4: 16px;
+  --uds-space-5: 24px;
+  --uds-space-6: 32px;
+  --uds-space-7: 48px;
+  --uds-space-8: 64px;
+  --uds-space-9: 96px;
+  --uds-layout-reading-measure: 45-75ch;
+  --uds-layout-touch-target-min: 44px;
+  --uds-font-body: var(--uds-theme-font-body);
+  --uds-font-heading: var(--uds-theme-font-heading);
+  --uds-font-mono: var(--uds-theme-font-mono);
+  --uds-motion-duration-fast: 120ms;
+  --uds-motion-duration-standard: 240ms;
+  --uds-motion-duration-slow: 480ms;
+  --uds-motion-easing-standard: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Semantic color roles — values are assigned by a selected theme. */
+  --uds-color-text-primary: initial;
+  --uds-color-text-secondary: initial;
+  --uds-color-text-inverse: initial;
+  --uds-color-action-primary: initial;
+  --uds-color-action-primaryText: initial;
+  --uds-color-border-subtle: initial;
+  --uds-color-focus-ring: initial;
+  --uds-surface-canvas: initial;
+  --uds-surface-elevated: initial;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --uds-motion-duration-fast: 0ms;
+    --uds-motion-duration-standard: 0ms;
+    --uds-motion-duration-slow: 0ms;
+  }
+}

@@ -1,0 +1,19 @@
+/**
+ * Universal Design System — Award Coatings theme (award-coatings).
+ * Generated from themes/award-coatings.json. Maps only approved semantic roles.
+ * Apply by setting data-uds-theme="award-coatings" on a parent (typically html).
+ */
+[data-uds-theme="award-coatings"] {
+  --uds-theme-font-body: "DM Sans", sans-serif;
+  --uds-theme-font-heading: Outfit, sans-serif;
+  --uds-theme-font-mono: ui-monospace, monospace;
+  --uds-color-text-primary: #1F2937;
+  --uds-color-text-secondary: #1F2937;
+  --uds-color-text-inverse: #FFFFFF;
+  --uds-color-action-primary: #E65100;
+  --uds-color-action-primaryText: #FFFFFF;
+  --uds-color-border-subtle: #005A8D;
+  --uds-color-focus-ring: #E65100;
+  --uds-surface-canvas: #F3F4F6;
+  --uds-surface-elevated: #FFFFFF;
+}

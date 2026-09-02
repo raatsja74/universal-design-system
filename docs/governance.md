@@ -20,3 +20,11 @@
 - Responsive container/grid primitives and density rules.
 - Motion timing/easing values beyond the minimal V0 contract.
 - Ownership, release cadence, and breaking-change policy.
+
+## Audit notes (2026-09-02)
+
+- Typography remains theme-owned: Outfit/DM Sans in reference-import themes; Instrument Sans / IBM Plex Mono in the Jaden theme.
+- A muted/faint text role and a serif family slot are present on the Jaden site and are not in core.
+- The 60/30/10 composition ratio stays unverified marketing art direction.
+- Contrast acceptance of imported Award Coatings, LeadBolt, and AI Ledger pairings is still open.
+- See docs/audit.md for evidence.
