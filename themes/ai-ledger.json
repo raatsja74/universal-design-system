@@ -1,0 +1,15 @@
+{
+  "meta": { "name": "AI Ledger", "status": "reference-import", "source": "Universal Design System — Design System" },
+  "typography": { "body": "DM Sans", "heading": "Outfit", "mono": "ui-monospace" },
+  "semantic": {
+    "color.text.primary": "#FFFFFF",
+    "color.text.secondary": "#00F2FE",
+    "color.text.inverse": "#0B0F19",
+    "color.action.primary": "#00F2FE",
+    "color.action.primaryText": "#0B0F19",
+    "color.border.subtle": "#00F2FE",
+    "color.focus.ring": "#00F2FE",
+    "surface.canvas": "#0B0F19",
+    "surface.elevated": "#0B0F19"
+  }
+}

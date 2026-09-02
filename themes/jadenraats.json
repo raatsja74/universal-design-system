@@ -1,0 +1,15 @@
+{
+  "meta": { "name": "Jaden Raats", "status": "implemented-reference", "source": "jadenraats.com globals.css" },
+  "typography": { "body": "Instrument Sans", "heading": "Instrument Sans", "mono": "IBM Plex Mono" },
+  "semantic": {
+    "color.text.primary": "rgb(30 27 21)",
+    "color.text.secondary": "rgb(108 100 87)",
+    "color.text.inverse": "rgb(244 239 230)",
+    "color.action.primary": "rgb(191 87 49)",
+    "color.action.primaryText": "rgb(244 239 230)",
+    "color.border.subtle": "rgb(30 27 21 / 0.2)",
+    "color.focus.ring": "rgb(191 87 49)",
+    "surface.canvas": "rgb(244 239 230)",
+    "surface.elevated": "rgb(236 229 216)"
+  }
+}

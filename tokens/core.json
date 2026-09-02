@@ -1,0 +1,45 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "meta": {
+    "name": "Universal foundation tokens",
+    "version": "0.1.0",
+    "status": "approved-v0"
+  },
+  "spacing": {
+    "1": { "value": "4px", "type": "dimension" },
+    "2": { "value": "8px", "type": "dimension" },
+    "3": { "value": "12px", "type": "dimension" },
+    "4": { "value": "16px", "type": "dimension" },
+    "5": { "value": "24px", "type": "dimension" },
+    "6": { "value": "32px", "type": "dimension" },
+    "7": { "value": "48px", "type": "dimension" },
+    "8": { "value": "64px", "type": "dimension" },
+    "9": { "value": "96px", "type": "dimension" }
+  },
+  "layout": {
+    "readingMeasure": { "value": "45-75ch", "type": "other" },
+    "touchTargetMin": { "value": "44px", "type": "dimension" }
+  },
+  "typography": {
+    "body": { "value": "theme.typography.body", "type": "fontFamily" },
+    "heading": { "value": "theme.typography.heading", "type": "fontFamily" },
+    "mono": { "value": "theme.typography.mono", "type": "fontFamily" }
+  },
+  "motion": {
+    "duration.fast": { "value": "120ms", "type": "duration" },
+    "duration.standard": { "value": "240ms", "type": "duration" },
+    "duration.slow": { "value": "480ms", "type": "duration" },
+    "easing.standard": { "value": "cubic-bezier(0.22, 1, 0.36, 1)", "type": "cubicBezier" }
+  },
+  "semantic": {
+    "color.text.primary": { "type": "color" },
+    "color.text.secondary": { "type": "color" },
+    "color.text.inverse": { "type": "color" },
+    "color.action.primary": { "type": "color" },
+    "color.action.primaryText": { "type": "color" },
+    "color.border.subtle": { "type": "color" },
+    "color.focus.ring": { "type": "color" },
+    "surface.canvas": { "type": "color" },
+    "surface.elevated": { "type": "color" }
+  }
+}

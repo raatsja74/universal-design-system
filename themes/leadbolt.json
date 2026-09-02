@@ -1,0 +1,15 @@
+{
+  "meta": { "name": "LeadBolt", "status": "reference-import", "source": "Universal Design System — Design System" },
+  "typography": { "body": "DM Sans", "heading": "Outfit", "mono": "ui-monospace" },
+  "semantic": {
+    "color.text.primary": "#111827",
+    "color.text.secondary": "#2662D9",
+    "color.text.inverse": "#FFFFFF",
+    "color.action.primary": "#FF5C00",
+    "color.action.primaryText": "#FFFFFF",
+    "color.border.subtle": "#2662D9",
+    "color.focus.ring": "#FF5C00",
+    "surface.canvas": "#FFFFFF",
+    "surface.elevated": "#FFFFFF"
+  }
+}
