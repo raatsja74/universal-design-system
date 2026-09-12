@@ -17,9 +17,15 @@
 ## Current open decisions
 
 - Whether any typography belongs to the universal core.
-- Responsive container/grid primitives and density rules.
 - Motion timing/easing values beyond the minimal V0 contract.
 - Ownership, release cadence, and breaking-change policy.
+
+## Approved Jaden brand direction (2026-09-11)
+
+- The Jaden theme is the approved default for Jaden-owned public sites, guides, operational tools, and data-heavy interfaces.
+- Its visual direction is editorial-operational brutalism: hard modular grids, square controls, visible borders, dense useful information, and restrained handmade texture.
+- Project-specific campaign art, photographs, illustration, and handwritten annotations remain outside core. They belong in a consuming project's theme assets and content layer.
+- The semantic foundation supports that direction through theme-owned palette/type plus neutral structural tokens. Other project themes retain their own values.
 
 ## Audit notes (2026-09-02)
 

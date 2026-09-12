@@ -18,6 +18,19 @@ for (const [name, token] of Object.entries(core.spacing)) {
   if (!Number.isInteger(px) || px % 4 !== 0) throw new Error(`spacing.${name} must be a 4px increment`);
 }
 
+const gridGap = Number.parseInt(core.layout.gridGap?.value, 10);
+if (!Number.isInteger(gridGap) || gridGap % 4 !== 0) {
+  throw new Error("layout.gridGap must be a 4px increment");
+}
+
+if (core.border?.["width.standard"]?.value !== "1px" || core.border?.["width.strong"]?.value !== "3px") {
+  throw new Error("border widths must expose the approved 1px and 3px structural values");
+}
+
+if (core.radius?.none?.value !== "0px") {
+  throw new Error("radius.none must remain 0px");
+}
+
 const themeFiles = (await readdir(themesDir)).filter((file) => file.endsWith(".json"));
 for (const file of themeFiles) {
   const theme = JSON.parse(await readFile(path.join(themesDir, file), "utf8"));

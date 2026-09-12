@@ -4,16 +4,18 @@
  * Apply by setting data-uds-theme="jadenraats" on a parent (typically html).
  */
 [data-uds-theme="jadenraats"] {
-  --uds-theme-font-body: "Instrument Sans", sans-serif;
-  --uds-theme-font-heading: "Instrument Sans", sans-serif;
+  --uds-theme-font-body: "IBM Plex Mono", sans-serif;
+  --uds-theme-font-heading: Anton, sans-serif;
   --uds-theme-font-mono: "IBM Plex Mono", monospace;
-  --uds-color-text-primary: rgb(30 27 21);
-  --uds-color-text-secondary: rgb(108 100 87);
-  --uds-color-text-inverse: rgb(244 239 230);
-  --uds-color-action-primary: rgb(191 87 49);
-  --uds-color-action-primaryText: rgb(244 239 230);
-  --uds-color-border-subtle: rgb(30 27 21 / 0.2);
-  --uds-color-focus-ring: rgb(191 87 49);
-  --uds-surface-canvas: rgb(244 239 230);
-  --uds-surface-elevated: rgb(236 229 216);
+  --uds-color-text-primary: #0A0A09;
+  --uds-color-text-secondary: #5D5A53;
+  --uds-color-text-inverse: #F2EFE6;
+  --uds-color-action-primary: #F4511E;
+  --uds-color-action-primaryText: #0A0A09;
+  --uds-color-action-text: #0A0A09;
+  --uds-color-border-subtle: #0A0A09;
+  --uds-color-focus-ring: #F4511E;
+  --uds-surface-canvas: #F2EFE6;
+  --uds-surface-elevated: #F2EFE6;
+  --uds-surface-inverse: #0A0A09;
 }

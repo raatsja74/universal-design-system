@@ -12,8 +12,10 @@
   --uds-color-text-inverse: #FFFFFF;
   --uds-color-action-primary: #E65100;
   --uds-color-action-primaryText: #FFFFFF;
+  --uds-color-action-text: #005A8D;
   --uds-color-border-subtle: #005A8D;
   --uds-color-focus-ring: #E65100;
   --uds-surface-canvas: #F3F4F6;
   --uds-surface-elevated: #FFFFFF;
+  --uds-surface-inverse: #1F2937;
 }

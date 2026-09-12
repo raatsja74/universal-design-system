@@ -15,6 +15,10 @@
   --uds-space-9: 96px;
   --uds-layout-reading-measure: 45-75ch;
   --uds-layout-touch-target-min: 44px;
+  --uds-layout-grid-gap: 16px;
+  --uds-border-width-standard: 1px;
+  --uds-border-width-strong: 3px;
+  --uds-radius-none: 0px;
   --uds-font-body: var(--uds-theme-font-body);
   --uds-font-heading: var(--uds-theme-font-heading);
   --uds-font-mono: var(--uds-theme-font-mono);
@@ -29,10 +33,12 @@
   --uds-color-text-inverse: initial;
   --uds-color-action-primary: initial;
   --uds-color-action-primaryText: initial;
+  --uds-color-action-text: initial;
   --uds-color-border-subtle: initial;
   --uds-color-focus-ring: initial;
   --uds-surface-canvas: initial;
   --uds-surface-elevated: initial;
+  --uds-surface-inverse: initial;
 }
 
 @media (prefers-reduced-motion: reduce) {

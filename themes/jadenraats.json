@@ -1,15 +1,17 @@
 {
-  "meta": { "name": "Jaden Raats", "status": "implemented-reference", "source": "jadenraats.com globals.css" },
-  "typography": { "body": "Instrument Sans", "heading": "Instrument Sans", "mono": "IBM Plex Mono" },
+  "meta": { "name": "Jaden Raats", "status": "approved-brand-system", "source": "Universal Brand Guide — Jaden Raats (2026-09-11)" },
+  "typography": { "body": "IBM Plex Mono", "heading": "Anton", "mono": "IBM Plex Mono" },
   "semantic": {
-    "color.text.primary": "rgb(30 27 21)",
-    "color.text.secondary": "rgb(108 100 87)",
-    "color.text.inverse": "rgb(244 239 230)",
-    "color.action.primary": "rgb(191 87 49)",
-    "color.action.primaryText": "rgb(244 239 230)",
-    "color.border.subtle": "rgb(30 27 21 / 0.2)",
-    "color.focus.ring": "rgb(191 87 49)",
-    "surface.canvas": "rgb(244 239 230)",
-    "surface.elevated": "rgb(236 229 216)"
+    "color.text.primary": "#0A0A09",
+    "color.text.secondary": "#5D5A53",
+    "color.text.inverse": "#F2EFE6",
+    "color.action.primary": "#F4511E",
+    "color.action.primaryText": "#0A0A09",
+    "color.action.text": "#0A0A09",
+    "color.border.subtle": "#0A0A09",
+    "color.focus.ring": "#F4511E",
+    "surface.canvas": "#F2EFE6",
+    "surface.elevated": "#F2EFE6",
+    "surface.inverse": "#0A0A09"
   }
 }

@@ -7,9 +7,11 @@
     "color.text.inverse": "#FFFFFF",
     "color.action.primary": "#FF5C00",
     "color.action.primaryText": "#FFFFFF",
+    "color.action.text": "#2662D9",
     "color.border.subtle": "#2662D9",
     "color.focus.ring": "#FF5C00",
     "surface.canvas": "#FFFFFF",
-    "surface.elevated": "#FFFFFF"
+    "surface.elevated": "#FFFFFF",
+    "surface.inverse": "#111827"
   }
 }

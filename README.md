@@ -17,7 +17,9 @@ When sources conflict, do not silently choose. Open a decision in docs/governanc
 ## What is ready
 
 - Semantic color, spacing, typography slots, layout, interaction, and motion tokens.
+- Structural tokens for modular layouts: 16px grid gaps, 1px/3px borders, and an explicit square radius.
 - Theme mappings for Jaden Raats, Award Coatings, LeadBolt, and AI Ledger.
+- A default Jaden visual system: editorial-operational brutalism with ink black, warm paper, signal orange, condensed display type, and technical mono copy. See docs/jadenraats-brand-system.md.
 - Generated CSS: core custom-property template plus one stylesheet per theme.
 - Canonical contracts for Button and text link.
 - An accessibility baseline, adoption checklist, and token validator.
@@ -47,4 +49,4 @@ To add a fifth project, duplicate an existing file in themes/, fill every approv
 - dist/uds.core.css: spacing, layout, motion, font aliases, empty semantic slots
 - dist/themes/<id>.css: values for approved semantic roles only
 
-Core never assigns a project palette as the default. Theme files are the only place raw color values appear, and they apply only under the matching data-uds-theme selector.
+Core never assigns a project palette as the default. Theme files are the only place raw color values appear, and they apply only under the matching data-uds-theme selector. The Jaden theme is the approved default for Jaden-owned public properties; it does not overwrite other project themes.

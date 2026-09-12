@@ -15,8 +15,8 @@ A link changes location (or in-page target). A button performs an action on the 
 
 | Variant | Use | Semantic mapping |
 | --- | --- | --- |
-| `inline` | Inside a sentence or paragraph | `color.action.primary` text, persistent underline using `currentColor` or `color.border.subtle` |
-| `standalone` | CTA-style text link, not in running copy | `color.action.primary` text; underline may appear on hover **in addition to** another persistent cue (weight, icon, or always-on underline) |
+| `inline` | Inside a sentence or paragraph | `color.action.text` text, persistent underline using `currentColor` or `color.border.subtle` |
+| `standalone` | CTA-style text link, not in running copy | `color.action.text` text; underline may appear on hover **in addition to** another persistent cue (weight, icon, or always-on underline) |
 
 Visited color is theme-owned and optional. If used, it must still meet contrast and must not be the only difference from unvisited.
 
@@ -61,7 +61,7 @@ Loading, empty, and error states are not used on Text link.
 
 ```css
 .uds-link {
-  color: var(--uds-color-action-primary);
+  color: var(--uds-color-action-text);
   text-underline-offset: var(--uds-space-1);
   transition: color var(--uds-motion-duration-fast) var(--uds-motion-easing-standard);
 }

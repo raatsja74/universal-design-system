@@ -55,6 +55,13 @@ export async function exportCss() {
   }
   coreLines.push(`  --uds-layout-reading-measure: ${core.layout.readingMeasure.value};`);
   coreLines.push(`  --uds-layout-touch-target-min: ${core.layout.touchTargetMin.value};`);
+  coreLines.push(`  --uds-layout-grid-gap: ${core.layout.gridGap.value};`);
+  for (const [name, token] of Object.entries(core.border)) {
+    coreLines.push(`  --uds-border-${name.replaceAll(".", "-")}: ${token.value};`);
+  }
+  for (const [name, token] of Object.entries(core.radius)) {
+    coreLines.push(`  --uds-radius-${name}: ${token.value};`);
+  }
   for (const name of Object.keys(core.typography)) {
     coreLines.push(`  --uds-font-${name}: var(--uds-theme-font-${name});`);
   }

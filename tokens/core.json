@@ -2,8 +2,8 @@
   "$schema": "https://design-tokens.github.io/community-group/format/",
   "meta": {
     "name": "Universal foundation tokens",
-    "version": "0.2.0",
-    "status": "approved-v0"
+    "version": "0.3.0",
+    "status": "approved-brand-foundation"
   },
   "spacing": {
     "1": { "value": "4px", "type": "dimension" },
@@ -18,7 +18,15 @@
   },
   "layout": {
     "readingMeasure": { "value": "45-75ch", "type": "other" },
-    "touchTargetMin": { "value": "44px", "type": "dimension" }
+    "touchTargetMin": { "value": "44px", "type": "dimension" },
+    "gridGap": { "value": "16px", "type": "dimension" }
+  },
+  "border": {
+    "width.standard": { "value": "1px", "type": "dimension" },
+    "width.strong": { "value": "3px", "type": "dimension" }
+  },
+  "radius": {
+    "none": { "value": "0px", "type": "dimension" }
   },
   "typography": {
     "body": { "value": "theme.typography.body", "type": "fontFamily" },
@@ -37,9 +45,11 @@
     "color.text.inverse": { "type": "color" },
     "color.action.primary": { "type": "color" },
     "color.action.primaryText": { "type": "color" },
+    "color.action.text": { "type": "color" },
     "color.border.subtle": { "type": "color" },
     "color.focus.ring": { "type": "color" },
     "surface.canvas": { "type": "color" },
-    "surface.elevated": { "type": "color" }
+    "surface.elevated": { "type": "color" },
+    "surface.inverse": { "type": "color" }
   }
 }

@@ -21,6 +21,8 @@ Reuse evidence: marketing CTAs and product controls share the same states, keybo
 
 Do not invent additional brand-colored variants. Theme expression happens through the semantic roles above.
 
+The approved Jaden theme renders primary and secondary actions as square, high-contrast controls: strong black border, no radius, uppercase display label, and an optional text arrow. It is a theme expression, not a separate component variant.
+
 ## States
 
 | State | Visual | Non-color cue | Semantics |
@@ -71,6 +73,8 @@ Use custom properties from the CSS export. Do not hard-code theme hex or RGB.
   min-width: var(--uds-layout-touch-target-min);
   padding: var(--uds-space-3) var(--uds-space-4);
   font-family: var(--uds-font-body);
+  border: var(--uds-border-strong) solid var(--uds-color-border-subtle);
+  border-radius: var(--uds-radius-none);
   transition:
     background-color var(--uds-motion-duration-fast) var(--uds-motion-easing-standard),
     color var(--uds-motion-duration-fast) var(--uds-motion-easing-standard),
@@ -79,6 +83,8 @@ Use custom properties from the CSS export. Do not hard-code theme hex or RGB.
 .uds-button--primary {
   background: var(--uds-color-action-primary);
   color: var(--uds-color-action-primaryText);
+  font-family: var(--uds-font-heading);
+  text-transform: uppercase;
 }
 .uds-button:focus-visible {
   outline: 2px solid var(--uds-color-focus-ring);
