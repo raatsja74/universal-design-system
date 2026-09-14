@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.0 — 2026-09-13
+
+- Added a live style guide at `style-guide.html` (GitHub Pages root): canonical palette, type, shape/border rules, component patterns, both known failure modes, and the legacy values that must not be reintroduced.
+- Documented the two known failure modes (mobile hero overlap, mobile dark-mode invert) as encoded rules on the Jaden theme reference page.
+- Documented legacy/drift values and their canonical replacements, and confirmed there is no separate rounded "marketing" mode.
+- Recorded the inline Serif emphasis face as an open item: used in production, not yet an approved typography token.
+
 ## 0.3.0 — 2026-09-11
 
 - Adopted the approved Jaden Raats brand direction as the default Jaden theme: ink black, warm paper, signal orange, Anton display type, and IBM Plex Mono utility copy.

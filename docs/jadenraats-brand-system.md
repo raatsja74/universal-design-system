@@ -53,3 +53,32 @@ On small screens, preserve hierarchy and borders while stacking the grid. Do not
 ## Boundaries
 
 This document defines the Jaden theme. It does not authorize importing Jaden palette, fonts, copy voice, or art direction into Award Coatings, LeadBolt, AI Ledger, or other independently branded themes.
+
+## Known failure modes
+
+Both of these have already shipped broken at least once in a real build for this brand. They are encoded rules, not advice.
+
+**1 — Mobile hero overlap.** A hero photo positioned `absolute` renders behind or through body copy on mobile. Any absolute photo positioning belongs inside a `min-width` media query. Under roughly 700px the photo must be `position: static`, in normal document flow, stacked *after* the text.
+
+**2 — Mobile dark-mode invert.** Without `<meta name="color-scheme" content="light only">` plus `color-scheme: light only` in CSS, phones in OS dark mode auto-invert the warm paper palette. Lock it on every page — meta tag and CSS, with `!important` on background and text colours.
+
+## Legacy values — do not reintroduce
+
+Earlier builds each re-derived the brand from scratch or from screenshots, producing parallel palettes. These values are documented drift:
+
+| Legacy | Canonical replacement |
+| --- | --- |
+| `#141210`, `#1c1a17` | `#0A0A09` (ink) |
+| `#e8552a`, `#cf5a35` | `#F4511E` (signal orange) |
+| `#f1ece1`, `#faf6ee`, `#ece5d4`, `#e5e0d3` | `#F2EFE6` (warm paper) |
+| `#8a8578`, `#a8a396`, `#2c2a26` | `#5D5A53` (secondary text) |
+| Archivo Black (display) | Anton |
+| Fraunces (accent) | Instrument Serif italic |
+| Inter, JetBrains Mono (body) | IBM Plex Mono |
+| 999px pill radius, 16px card radius | `0px` — no exceptions |
+
+There is no separate "rounded / pill" mode for marketing surfaces. The approved direction is one system: 0px radius, hard borders, orange as the only strong accent.
+
+## Open items
+
+- **Inline emphasis face.** The live site loads Instrument Serif italic through `next/font` as `--font-serif` for single-phrase emphasis. It is used in production but is not yet an approved typography token in `themes/jadenraats.json`, so it is not exported in `dist/themes/jadenraats.css`. Either promote it to a token or stop using it — right now it is the one value an agent cannot fetch.

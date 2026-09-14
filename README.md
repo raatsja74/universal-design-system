@@ -50,3 +50,29 @@ To add a fifth project, duplicate an existing file in themes/, fill every approv
 - dist/themes/<id>.css: values for approved semantic roles only
 
 Core never assigns a project palette as the default. Theme files are the only place raw color values appear, and they apply only under the matching data-uds-theme selector. The Jaden theme is the approved default for Jaden-owned public properties; it does not overwrite other project themes.
+
+## Live style guide
+
+`style-guide.html` is the human-readable reference for the Jaden theme: canonical palette, type, shape and border rules, component patterns, both known failure modes, and the legacy values that must not be reintroduced. It loads `dist/uds.core.css` then `dist/themes/jadenraats.css` — the same files a project consumes — so if the style guide renders correctly, the theme is intact.
+
+Enable GitHub Pages (Settings → Pages → deploy from `main`, root) to publish it. It is also readable locally by opening the file; no build step is required.
+
+## Agent access
+
+Agents must fetch these values rather than restate them from memory or from an older build. Raw endpoints once Pages/repo access is live:
+
+| Artifact | Raw URL |
+| --- | --- |
+| Theme values | `https://raw.githubusercontent.com/raatsja74/universal-design-system/main/themes/jadenraats.json` |
+| Theme stylesheet | `https://raw.githubusercontent.com/raatsja74/universal-design-system/main/dist/themes/jadenraats.css` |
+| Core custom properties | `https://raw.githubusercontent.com/raatsja74/universal-design-system/main/dist/uds.core.css` |
+| Foundation tokens | `https://raw.githubusercontent.com/raatsja74/universal-design-system/main/tokens/core.json` |
+
+The `raats-design-system` agent skill fetches the theme values from this repository and falls back to a dated snapshot only if the fetch fails — and says so out loud when it does. `jd-guide-writer` owns guide content structure and defers to this repository for every visual value.
+
+## Known failure modes
+
+Two defects have shipped at least once in real builds for the Jaden brand. They are encoded as rules in `docs/jadenraats-brand-system.md`, in the style guide, and in the `raats-design-system` skill:
+
+1. **Mobile hero overlap** — absolute-positioned hero photos render behind mobile body copy; absolute positioning must live inside a `min-width` media query.
+2. **Mobile dark-mode invert** — without `color-scheme: light only` locked in both a meta tag and CSS, OS dark mode inverts the warm paper palette.

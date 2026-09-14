@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" data-uds-theme="jadenraats" style="color-scheme: light only;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Universal Design System — Jaden theme reference</title>
+<link rel="stylesheet" href="dist/uds.core.css">
+<link rel="stylesheet" href="dist/themes/jadenraats.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;700&display=swap">
+<style>
+  html, body { color-scheme: light only; }
+  html { background: var(--uds-surface-canvas) !important; }
+  body {
+    margin: 0;
+    padding: var(--uds-space-8) var(--uds-space-5) var(--uds-space-9);
+    max-width: 980px;
+    margin-inline: auto;
+    background: var(--uds-surface-canvas) !important;
+    color: var(--uds-color-text-primary) !important;
+    font-family: var(--uds-font-mono);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, .display {
+    font-family: var(--uds-font-heading);
+    text-transform: uppercase;
+    line-height: 0.92;
+    letter-spacing: 0.005em;
+    font-weight: 400;
+    margin: 0 0 var(--uds-space-2);
+    font-size: clamp(34px, 7vw, 64px);
+  }
+  .lede { max-width: 62ch; color: var(--uds-color-text-primary); }
+  .meta {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--uds-color-text-secondary);
+    margin-bottom: var(--uds-space-7);
+  }
+  section {
+    border-top: var(--uds-border-width-strong) solid var(--uds-color-border-subtle);
+    padding-top: var(--uds-space-5);
+    margin-top: var(--uds-space-7);
+  }
+  h2 {
+    font-family: var(--uds-font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--uds-color-action-primary);
+    margin: 0 0 var(--uds-space-5);
+  }
+  h3 { font-family: var(--uds-font-mono); font-size: 13px; text-transform: uppercase; margin: 0 0 var(--uds-space-3); }
+  p { max-width: 68ch; }
+  code, .mono { font-family: var(--uds-font-mono); }
+  code { font-size: 13px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  th, td { border: var(--uds-border-width-standard) solid var(--uds-color-border-subtle); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { text-transform: uppercase; font-size: 11px; letter-spacing: 0.06em; background: var(--uds-surface-elevated); }
+  .swatches { display: flex; gap: var(--uds-space-4); flex-wrap: wrap; }
+  .swatch { width: 160px; }
+  .swatch .box { height: 84px; border: var(--uds-border-width-strong) solid var(--uds-color-border-subtle); }
+  .swatch .label { font-size: 11px; margin-top: 6px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .specimen { border-bottom: var(--uds-border-width-standard) solid var(--uds-color-border-subtle); padding: var(--uds-space-4) 0; }
+  .specimen .tag { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--uds-color-text-secondary); margin-bottom: 6px; }
+  .btn {
+    display: inline-block;
+    font-family: var(--uds-font-heading);
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 12px 20px;
+    min-height: var(--uds-layout-touch-target-min);
+    box-sizing: border-box;
+    border: var(--uds-border-width-strong) solid var(--uds-color-border-subtle);
+    border-radius: var(--uds-radius-none);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .btn-primary { background: var(--uds-color-action-primary); color: var(--uds-color-action-primaryText); }
+  .btn-secondary { background: var(--uds-surface-canvas); color: var(--uds-color-text-primary); }
+  .row { display: flex; gap: var(--uds-space-3); flex-wrap: wrap; }
+  .warn, .note { border: var(--uds-border-width-standard) solid var(--uds-color-border-subtle); padding: var(--uds-space-4); margin-bottom: var(--uds-space-3); }
+  .warn { background: var(--uds-surface-inverse); color: var(--uds-color-text-inverse); }
+  .warn .t { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--uds-color-action-primary); margin-bottom: 6px; }
+  .legacy { border-left: var(--uds-border-width-strong) solid var(--uds-color-action-primary); padding-left: var(--uds-space-4); }
+  a { color: var(--uds-color-action-text); }
+  :focus-visible { outline: 3px solid var(--uds-color-focus-ring); outline-offset: 2px; }
+  @media (max-width: 700px) {
+    body { padding: var(--uds-space-6) var(--uds-space-4); }
+    .hero { display: flex; flex-direction: column; }
+    .hero-photo { position: static !important; width: 100%; margin-top: var(--uds-space-5); }
+  }
+</style>
+</head>
+<body>
+
+<h1>Universal Design System</h1>
+<p class="lede">Live reference for the <strong>Jaden Raats</strong> theme. One system, one palette, no modes to blend. If a build for jadenraats.com or JD Guides shows a colour, font, corner radius or border that is not on this page, it is drift.</p>
+<p class="meta">data-uds-theme="jadenraats" · v0.4.0 · updated 2026-09-13</p>
+
+<section>
+  <h2>Canonical palette</h2>
+  <div class="swatches">
+    <div class="swatch"><div class="box" style="background:#F2EFE6;"></div><div class="label">warm paper<br>#F2EFE6 · surface.canvas</div></div>
+    <div class="swatch"><div class="box" style="background:#0A0A09;"></div><div class="label">ink black<br>#0A0A09 · text.primary</div></div>
+    <div class="swatch"><div class="box" style="background:#F4511E;"></div><div class="label">signal orange<br>#F4511E · action.primary</div></div>
+    <div class="swatch"><div class="box" style="background:#5D5A53;"></div><div class="label">secondary text<br>#5D5A53 · text.secondary</div></div>
+  </div>
+  <p><strong>Orange is the only strong accent.</strong> It is for actions, active states, numbers, stamps and labels — never a large background fill. Body copy is ink or secondary text; orange on paper is roughly 3.3:1, so it never carries body text.</p>
+</section>
+
+<section>
+  <h2>Type</h2>
+  <div class="specimen">
+    <span class="tag">Display — Anton, uppercase, tight</span>
+    <div class="display" style="font-size:clamp(28px,6vw,52px);">Build the system</div>
+  </div>
+  <div class="specimen">
+    <span class="tag">Utility / body — IBM Plex Mono</span>
+    <div style="font-size:15px;">Descriptions, metadata, instructions and system UI. Body copy is mono by default in this theme.</div>
+  </div>
+  <div class="specimen">
+    <span class="tag">Inline emphasis — Instrument Serif italic (site level)</span>
+    <div style="font-family:'Instrument Serif',Georgia,serif; font-style:italic; font-size:24px;">builder</div>
+    <p style="font-size:13px; color:var(--uds-color-text-secondary); margin-bottom:0;">Used for a single inline phrase, never a whole paragraph. Loaded by the live site through <code>next/font</code> as <code>--font-serif</code>. <strong>Known gap:</strong> this face is not yet an approved UDS typography token — see the open items in <code>README.md</code>.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Shape, border and grid rules</h2>
+  <table>
+    <tr><th>Rule</th><th>Value</th><th>Job</th></tr>
+    <tr><td>Radius</td><td><code>--uds-radius-none</code> (0px)</td><td>No rounded cards, no pills, no glass treatment, no gradients, no soft shadows. This is a hard rule.</td></tr>
+    <tr><td>Border, standard</td><td><code>--uds-border-width-standard</code> (1px)</td><td>Dense interior cells, table dividers.</td></tr>
+    <tr><td>Border, strong</td><td><code>--uds-border-width-strong</code> (3px)</td><td>Structural frames, card edges, primary CTAs, section tops.</td></tr>
+    <tr><td>Grid gap</td><td><code>--uds-layout-grid-gap</code> (16px)</td><td>Hard modular grid. Sections touch; dividers carry the rhythm.</td></tr>
+    <tr><td>Spacing scale</td><td><code>--uds-space-1…9</code> (4px → 96px)</td><td>4px baseline. Never invent an off-scale number.</td></tr>
+    <tr><td>Touch targets</td><td><code>--uds-layout-touch-target-min</code> (44px)</td><td>WCAG 2.2 AA. Applies to every interactive element.</td></tr>
+    <tr><td>Reading measure</td><td><code>--uds-layout-reading-measure</code></td><td>45–75ch for prose.</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Components</h2>
+  <div class="row" style="margin-bottom:var(--uds-space-5);">
+    <a class="btn btn-primary" href="#">Read guide</a>
+    <a class="btn btn-secondary" href="#">Browse skills</a>
+  </div>
+  <div class="note">
+    <h3>Guide card</h3>
+    <p style="margin:0;">Number / category, real or operational image, bold uppercase title, one short practical description, explicit read action. No oversized empty card areas.</p>
+  </div>
+  <div class="note">
+    <h3>Data board</h3>
+    <p style="margin:0;">Ink top bar or orange category header, visible filters and search, narrow modular cells, meaningful counts. Denser than a marketing surface — same palette, same 0px radius.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Known failure modes — encoded rules, not advice</h2>
+  <p>Both of these have already shipped broken at least once in a real build for this brand.</p>
+  <div class="warn">
+    <span class="t">1 · Mobile hero overlap</span>
+    A hero photo positioned <code>absolute</code> renders behind or through body copy on mobile. Any absolute photo positioning belongs inside a <code>min-width</code> media query. Under ~700px the photo must be <code>position:static</code>, in normal document flow, stacked <em>after</em> the text.
+  </div>
+  <div class="warn">
+    <span class="t">2 · Mobile dark-mode invert</span>
+    Without <code>&lt;meta name="color-scheme" content="light only"&gt;</code> plus <code>color-scheme: light only</code> in CSS, phones in OS dark mode auto-invert the warm paper palette into something broken. Lock it on every page — meta tag and CSS, with <code>!important</code> on background and text colours.
+  </div>
+</section>
+
+<section>
+  <h2>Legacy values — do not reintroduce</h2>
+  <div class="legacy">
+    <p>These are documented drift. They came from earlier builds that each re-derived the brand from scratch or from screenshots. If you find one of these in a build for this brand, it is a bug:</p>
+    <table>
+      <tr><th>Legacy</th><th>Canonical replacement</th></tr>
+      <tr><td><code>#141210</code>, <code>#1c1a17</code></td><td><code>#0A0A09</code> (ink)</td></tr>
+      <tr><td><code>#e8552a</code>, <code>#cf5a35</code></td><td><code>#F4511E</code> (signal orange)</td></tr>
+      <tr><td><code>#f1ece1</code>, <code>#faf6ee</code>, <code>#ece5d4</code></td><td><code>#F2EFE6</code> (warm paper)</td></tr>
+      <tr><td><code>#8a8578</code>, <code>#a8a396</code></td><td><code>#5D5A53</code> (secondary text)</td></tr>
+      <tr><td>Archivo Black (display)</td><td>Anton</td></tr>
+      <tr><td>Fraunces (accent)</td><td>Instrument Serif italic</td></tr>
+      <tr><td>Inter, JetBrains Mono (body)</td><td>IBM Plex Mono</td></tr>
+      <tr><td>999px pill radius, 16px card radius</td><td><code>0px</code> — no exceptions</td></tr>
+      <tr><td>“marketing mode = rounded / pill”</td><td>There is no rounded mode. One system.</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>How an agent consumes this</h2>
+  <p>Never restate these values from memory — fetch them. A build that hard-codes a palette will drift the moment the theme changes.</p>
+  <table>
+    <tr><th>Artifact</th><th>URL</th></tr>
+    <tr><td>Theme values (JSON)</td><td><code>https://raw.githubusercontent.com/raatsja74/universal-design-system/main/themes/jadenraats.json</code></td></tr>
+    <tr><td>Theme stylesheet</td><td><code>https://raw.githubusercontent.com/raatsja74/universal-design-system/main/dist/themes/jadenraats.css</code></td></tr>
+    <tr><td>Core custom properties</td><td><code>https://raw.githubusercontent.com/raatsja74/universal-design-system/main/dist/uds.core.css</code></td></tr>
+    <tr><td>Framework tokens</td><td><code>https://raw.githubusercontent.com/raatsja74/universal-design-system/main/tokens/core.json</code></td></tr>
+  </table>
+  <p style="margin-top:var(--uds-space-5);">Load <code>dist/uds.core.css</code> first, then <code>dist/themes/jadenraats.css</code>, and set <code>data-uds-theme="jadenraats"</code> on a parent element. Use the semantic variables; do not hard-code the palette in components.</p>
+</section>
+
+<section>
+  <h2>Scope boundary</h2>
+  <p>This theme is the personal/builder brand: jadenraats.com, JD Guides, and related Jaden-owned properties. It does <strong>not</strong> authorise importing this palette, type or voice into <strong>Award Coatings</strong>, LeadBolt, AI Ledger or any other independently branded theme.</p>
+</section>
+
+</body>
+</html>
