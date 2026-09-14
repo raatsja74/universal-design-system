@@ -53,9 +53,11 @@ Core never assigns a project palette as the default. Theme files are the only pl
 
 ## Live style guide
 
+**Live:** https://raatsja74.github.io/universal-design-system/ (redirects to `style-guide.html`)
+
 `style-guide.html` is the human-readable reference for the Jaden theme: canonical palette, type, shape and border rules, component patterns, both known failure modes, and the legacy values that must not be reintroduced. It loads `dist/uds.core.css` then `dist/themes/jadenraats.css` — the same files a project consumes — so if the style guide renders correctly, the theme is intact.
 
-Enable GitHub Pages (Settings → Pages → deploy from `main`, root) to publish it. It is also readable locally by opening the file; no build step is required.
+GitHub Pages is enabled from `main` at the branch root; `index.html` redirects the bare URL to the guide. It is also readable locally by opening the file; no build step is required.
 
 ## Agent access
 
