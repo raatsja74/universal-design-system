@@ -111,7 +111,22 @@ export async function exportCss() {
     for (const role of requiredRoles) {
       lines.push(`  ${cssVar(role)}: ${theme.semantic[role]};`);
     }
+    for (const group of ["radius", "shadow", "border"]) {
+      for (const [name, value] of Object.entries(theme[group] ?? {})) {
+        lines.push(`  ${cssVar(`${group}.${name}`)}: ${value};`);
+      }
+    }
     lines.push("}");
+    for (const [mode, tokens] of Object.entries(theme.modes ?? {})) {
+      lines.push(`[data-uds-theme="${id}"][data-site-theme="${mode}"], [data-uds-theme="${id}"][data-uds-mode="${mode}"] {`);
+      for (const [role, value] of Object.entries(tokens.semantic ?? {})) {
+        lines.push(`  ${cssVar(role)}: ${value};`);
+      }
+      for (const [name, value] of Object.entries(tokens.shadow ?? {})) {
+        lines.push(`  --uds-shadow-${name}: ${value};`);
+      }
+      lines.push("}");
+    }
     lines.push("");
     await writeFile(path.join(themesOut, `${id}.css`), lines.join("\n"));
   }

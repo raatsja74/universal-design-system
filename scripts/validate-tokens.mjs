@@ -40,6 +40,15 @@ for (const file of themeFiles) {
   for (const role of requiredRoles) {
     if (!theme.semantic?.[role]) throw new Error(`${file} is missing ${role}`);
   }
+  for (const [mode, tokens] of Object.entries(theme.modes ?? {})) {
+    if (mode !== "dark") throw new Error(`${file}: unsupported mode ${mode}`);
+    for (const role of requiredRoles) {
+      if (!tokens.semantic?.[role]) throw new Error(`${file}: ${mode} missing ${role}`);
+    }
+    for (const role of Object.keys(tokens.semantic)) {
+      if (!requiredRoles.includes(role)) throw new Error(`${file}: unapproved mode role ${role}`);
+    }
+  }
   const extra = Object.keys(theme.semantic).filter((role) => !requiredRoles.includes(role));
   if (extra.length) {
     throw new Error(`${file} maps unapproved semantic roles: ${extra.join(", ")}`);

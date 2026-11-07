@@ -1,3 +1,9 @@
+## Unreleased
+
+- Add opt-in `jadenraats-modern` light/dark theme, radius and shadow roles without replacing the legacy theme.
+- Export theme shape, depth, border and dark-mode overrides from JSON.
+- Correct invalid reading measure `45-75ch` to a usable `75ch` maximum.
+
 # Changelog
 
 ## 0.4.0 — 2026-09-13

@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "name": "Jaden Raats Modern",
+    "status": "approved-brand-system",
+    "source": "jadenraats.com DESIGN.md, November 2026"
+  },
+  "typography": {
+    "body": "system-ui",
+    "heading": "system-ui",
+    "mono": "ui-monospace"
+  },
+  "semantic": {
+    "color.text.primary": "#1D1D1F",
+    "color.text.secondary": "#6E6E73",
+    "color.text.inverse": "#F5F5F7",
+    "color.action.primary": "#F4511E",
+    "color.action.primaryText": "#FFFFFF",
+    "color.action.text": "#1D1D1F",
+    "color.border.subtle": "#D9D9DE",
+    "color.focus.ring": "#F4511E",
+    "surface.canvas": "#F5F5F7",
+    "surface.elevated": "#FFFFFF",
+    "surface.inverse": "#1D1D1F"
+  },
+  "modes": {
+    "dark": {
+      "semantic": {
+        "color.text.primary": "#F5F5F7",
+        "color.text.secondary": "#A1A1A6",
+        "color.text.inverse": "#1D1D1F",
+        "color.action.primary": "#F4511E",
+        "color.action.primaryText": "#FFFFFF",
+        "color.action.text": "#F5F5F7",
+        "color.border.subtle": "#38383A",
+        "color.focus.ring": "#F4511E",
+        "surface.canvas": "#000000",
+        "surface.elevated": "#1C1C1E",
+        "surface.inverse": "#F5F5F7"
+      },
+      "shadow": {
+        "card": "none",
+        "hover": "none"
+      }
+    }
+  },
+  "radius": {
+    "card": "22px",
+    "inner": "14px",
+    "small": "10px",
+    "pill": "980px"
+  },
+  "shadow": {
+    "card": "0 1px 2px rgb(from #000000 r g b / 0.04), 0 10px 30px rgb(from #000000 r g b / 0.06)",
+    "hover": "0 2px 4px rgb(from #000000 r g b / 0.05), 0 18px 40px rgb(from #000000 r g b / 0.10)"
+  },
+  "border": {
+    "width.standard": "1px",
+    "width.strong": "1px"
+  }
+}
