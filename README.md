@@ -78,3 +78,9 @@ Two defects have shipped at least once in real builds for the Jaden brand. They 
 
 1. **Mobile hero overlap** — absolute-positioned hero photos render behind mobile body copy; absolute positioning must live inside a `min-width` media query.
 2. **Mobile dark-mode invert** — without `color-scheme: light only` locked in both a meta tag and CSS, OS dark mode inverts the warm paper palette.
+
+## Modern Jaden theme
+
+Load `dist/uds.core.css` followed by `dist/themes/jadenraats-modern.css`, then set `data-uds-theme="jadenraats-modern"` on html. Set `data-uds-mode="dark"` (or the site's `data-site-theme="dark"`) for dark mode; omit it for light. The existing `jadenraats` theme remains the legacy brutalist theme.
+
+The modern theme supplies semantic canvas, elevated, text, secondary and border colors, `--uds-radius-{card,inner,small,pill}`, `--uds-shadow-{card,hover}` and hairline borders. Dark mode disables shadows. Font roles use system faces; applications may override font slots. The reading measure token is now a valid maximum of `75ch`; constrain prose to available container width on small screens.
