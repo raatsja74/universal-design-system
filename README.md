@@ -51,7 +51,12 @@ To add a fifth project, duplicate an existing file in themes/, fill every approv
 
 Core never assigns a project palette as the default. Theme files are the only place raw color values appear, and they apply only under the matching data-uds-theme selector. The `jadenraats-modern` theme is the approved default for Jaden-owned public properties; it does not overwrite other project themes.
 
-## Live style guide
+## Current Jaden visual reference
+
+- [Modern theme tokens](https://github.com/raatsja74/universal-design-system/blob/main/themes/jadenraats-modern.json)
+- [Site stylesheet imports and theme selector](https://github.com/raatsja74/jadenraats.com/blob/main/src/app/layout.tsx)
+
+## Live previews
 
 **Live:** https://raatsja74.github.io/universal-design-system/ opens the `jadenraats-modern` preview (`index.html`).
 
