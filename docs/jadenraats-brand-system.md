@@ -1,6 +1,8 @@
-# Jaden Raats Brand System
+# Jaden Raats Brand System (legacy theme `jadenraats`)
 
-Approved default visual direction for Jaden-owned public sites, guides, dashboards, databases, and tools. It is derived from the supplied brand guide and the Jaden site / Skill Architecture Board references reviewed on 2026-09-11.
+> **Legacy since 2026-11-08.** The default Jaden direction is now `jadenraats-modern`; see docs/jadenraats-modern-brand-system.md. This document governs the legacy brutalist theme only. Its bans on rounded corners, pills, glass and soft shadows apply inside this theme, not to `jadenraats-modern`.
+
+Legacy visual direction (the Jaden default from 2026-09-11 until 2026-11-08) for Jaden-owned public sites, guides, dashboards, databases, and tools. It was derived from the supplied brand guide and the Jaden site / Skill Architecture Board references reviewed on 2026-09-11.
 
 ## Visual thesis
 

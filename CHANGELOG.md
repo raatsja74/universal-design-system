@@ -1,5 +1,8 @@
 ## Unreleased
 
+- Make `jadenraats-modern` the documented default for Jaden-owned work; mark the brutalist `jadenraats` theme and its brand doc as legacy (README, governance, adoption).
+- Add docs/jadenraats-modern-brand-system.md: shape, depth, color, type, Liquid Glass placement and fallbacks, accessibility and audit rules for the modern theme.
+
 - Add opt-in `jadenraats-modern` light/dark theme, radius and shadow roles without replacing the legacy theme.
 - Export theme shape, depth, border and dark-mode overrides from JSON.
 - Correct invalid reading measure `45-75ch` to a usable `75ch` maximum.

@@ -4,7 +4,7 @@ Use this when a project starts consuming the Universal Design System. Do not cop
 
 ## Choose and load a theme
 
-- Pick one theme: jadenraats, award-coatings, leadbolt, or ai-ledger.
+- Pick one theme: jadenraats-modern (Jaden default), jadenraats (legacy), award-coatings, leadbolt, or ai-ledger.
 - Load dist/uds.core.css first (semantic slots, spacing, motion).
 - Load one matching file from dist/themes.
 - Set data-uds-theme on html.

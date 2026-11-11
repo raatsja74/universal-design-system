@@ -1,25 +1,63 @@
-<!DOCTYPE html>
-<html lang="en" data-uds-theme="jadenraats" style="color-scheme: light only;">
+<!doctype html>
+<!-- Created by Hark | 2026-11-11: GitHub Pages home, previews the default jadenraats-modern theme. -->
+<html lang="en" data-uds-theme="jadenraats-modern">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="light only">
-<title>Universal Design System — Jaden theme</title>
-<meta http-equiv="refresh" content="0; url=./style-guide.html">
-<link rel="canonical" href="./style-guide.html">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Universal Design System: Jaden modern theme</title><link rel="stylesheet" href="dist/uds.core.css">
+<link rel="stylesheet" href="dist/themes/jadenraats-modern.css">
+<link rel="stylesheet" href="dist/themes/jadenraats.css">
+<link rel="stylesheet" href="dist/themes/award-coatings.css">
+<link rel="stylesheet" href="dist/themes/leadbolt.css">
+<link rel="stylesheet" href="dist/themes/ai-ledger.css">
+<script>try{if(matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.dataset.udsMode='dark'}catch(e){}</script>
 <style>
-  html { background: #F2EFE6 !important; color-scheme: light only; }
-  body {
-    margin: 0;
-    padding: 48px 24px;
-    background: #F2EFE6 !important;
-    color: #0A0A09 !important;
-    font-family: "IBM Plex Mono", monospace;
-  }
-  a { color: #0A0A09; }
-</style>
-</head>
+*{box-sizing:border-box}
+html{background:var(--uds-surface-canvas);color-scheme:light dark}
+body{margin:0;color:var(--uds-color-text-primary);background:var(--uds-surface-canvas);font-family:var(--uds-font-body);line-height:1.55}
+.wrap{max-width:1120px;margin:auto;padding:0 var(--uds-space-5)}
+header.glass{position:sticky;top:0;z-index:5;padding:var(--uds-space-3) 0;border-bottom:var(--uds-border-width-standard) solid var(--uds-color-border-subtle);background:color-mix(in srgb,var(--uds-surface-canvas) 72%,transparent);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){header.glass{background:var(--uds-surface-canvas)}}
+@media (prefers-reduced-transparency:reduce){header.glass{background:var(--uds-surface-canvas);backdrop-filter:none;-webkit-backdrop-filter:none}}
+@media (prefers-contrast:more){header.glass{background:var(--uds-surface-canvas);backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom-color:var(--uds-color-text-primary)}}
+.bar{display:flex;flex-wrap:wrap;gap:var(--uds-space-3);align-items:center;justify-content:space-between}
+.mark{font-weight:700}.mark b{color:var(--uds-color-action-primary)}
+.controls{display:flex;gap:var(--uds-space-2);flex-wrap:wrap}
+select,.toggle{min-height:var(--uds-layout-touch-target-min);padding:0 var(--uds-space-4);font:inherit;font-size:15px;color:var(--uds-color-text-primary);background:var(--uds-surface-elevated);border:var(--uds-border-width-standard) solid var(--uds-color-border-subtle);border-radius:var(--uds-radius-pill,0);cursor:pointer}
+.hero{padding:var(--uds-space-8) 0 var(--uds-space-6)}
+small{display:block;font-size:14px;color:var(--uds-color-text-secondary);margin-bottom:var(--uds-space-2)}
+h1{max-width:16ch;margin:0 0 var(--uds-space-4);font:700 clamp(2.4rem,7vw,4.5rem)/1.04 var(--uds-font-heading);letter-spacing:-0.025em}
+h2{margin:0 0 var(--uds-space-2);font:700 1.5rem/1.2 var(--uds-font-heading);letter-spacing:-0.015em}
+p{max-width:var(--uds-layout-reading-measure);margin:0 0 var(--uds-space-4)}
+.lead{font-size:1.25rem;color:var(--uds-color-text-secondary)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--uds-layout-grid-gap);padding-bottom:var(--uds-space-8)}
+.card{padding:var(--uds-space-5);background:var(--uds-surface-elevated);border:var(--uds-border-width-standard) solid var(--uds-color-border-subtle);border-radius:var(--uds-radius-card,0);box-shadow:var(--uds-shadow-card,none);transition:transform var(--uds-motion-duration-fast) var(--uds-motion-easing-standard),box-shadow var(--uds-motion-duration-fast) var(--uds-motion-easing-standard)}
+.card:hover{transform:translateY(-2px);box-shadow:var(--uds-shadow-hover,none)}
+.chip{display:inline-block;padding:4px 12px;font-size:14px;border:var(--uds-border-width-standard) solid var(--uds-color-border-subtle);border-radius:var(--uds-radius-pill,0);color:var(--uds-color-text-secondary)}
+.btn{display:inline-flex;align-items:center;min-height:var(--uds-layout-touch-target-min);padding:0 var(--uds-space-5);border:0;border-radius:var(--uds-radius-pill,0);background:var(--uds-color-action-primary);color:var(--uds-color-action-primaryText);font:600 1rem var(--uds-font-body);cursor:pointer;text-decoration:none}
+a{color:var(--uds-color-action-text);text-underline-offset:.2em}
+:focus-visible{outline:2px solid var(--uds-color-focus-ring);outline-offset:3px}
+.swatches{display:flex;gap:var(--uds-space-2);margin-top:var(--uds-space-3)}
+.sw{width:36px;height:36px;border-radius:var(--uds-radius-small,0);border:var(--uds-border-width-standard) solid var(--uds-color-border-subtle)}
+footer{padding:var(--uds-space-6) 0;border-top:var(--uds-border-width-standard) solid var(--uds-color-border-subtle);color:var(--uds-color-text-secondary);font-size:14px}
+@media (max-width:760px){.grid{grid-template-columns:1fr}.hero{padding-top:var(--uds-space-6)}}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+</style></head>
 <body>
-<p>Opening the <a href="./style-guide.html">Jaden theme style guide</a>…</p>
-</body>
-</html>
+<header class="glass"><div class="wrap bar"><div class="mark">UDS<b>*</b> preview</div>
+<div class="controls"><label for="theme" class="sr" style="position:absolute;left:-9999px">Preview theme</label>
+<select id="theme"><option value="jadenraats-modern">Jaden Raats (default)</option><option value="jadenraats">Jaden Raats legacy</option><option value="award-coatings">Award Coatings</option><option value="leadbolt">LeadBolt</option><option value="ai-ledger">AI Ledger</option></select>
+<button class="toggle" id="mode" type="button">Dark mode</button></div></div></header>
+<main class="wrap">
+<section class="hero"><small>Universal Design System 0.4.0, unreleased modern theme</small><h1>One system. Separate themes.</h1><p class="lead">Jaden's default theme is <code>jadenraats-modern</code>: rounded, light and dark, one orange accent, Liquid Glass only on floating chrome. Other projects keep their own themes.</p><a class="btn" href="docs/jadenraats-modern-brand-system.md">Read the rules</a> &nbsp; <a href="./style-guide.html">Legacy theme reference</a></section>
+<section class="grid" id="cards">
+<article class="card"><span class="chip">Surface</span><h2>Elevated card</h2><p>Radius, border and depth come from the theme. Legacy themes fall back to square and flat.</p></article>
+<article class="card"><span class="chip">Action</span><h2>One accent</h2><p>The action color marks primary buttons, focus and active states. Never body text.</p><button class="btn" type="button">Take action</button></article>
+<article class="card"><span class="chip">Color roles</span><h2>Semantic only</h2><p>Components read roles, never hex.</p><div class="swatches"><span class="sw" style="background:var(--uds-surface-canvas)"></span><span class="sw" style="background:var(--uds-surface-elevated)"></span><span class="sw" style="background:var(--uds-color-text-primary)"></span><span class="sw" style="background:var(--uds-color-action-primary)"></span></div></article>
+</section></main>
+<footer><div class="wrap">Core tokens assign no brand palette. Dark mode applies to themes that define it.</div></footer>
+<script>
+var r=document.documentElement,m=document.getElementById('mode');
+function lbl(){m.textContent=r.dataset.udsMode==='dark'?'Light mode':'Dark mode'}lbl();
+document.getElementById('theme').addEventListener('change',function(e){r.dataset.udsTheme=e.target.value});
+m.addEventListener('click',function(){if(r.dataset.udsMode==='dark')delete r.dataset.udsMode;else r.dataset.udsMode='dark';lbl()});
+</script></body></html>
