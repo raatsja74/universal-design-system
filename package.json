@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "validate": "node scripts/validate-tokens.mjs",
-    "export:css": "node scripts/export-css.mjs"
+    "export:css": "node scripts/export-css.mjs",
+    "check:contrast": "node scripts/check-modern-contrast.mjs"
   }
 }

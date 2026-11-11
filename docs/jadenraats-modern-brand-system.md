@@ -22,7 +22,7 @@ Modern, rounded, Apple-style. A neutral canvas in light and dark, white or graph
 | Type | Platform system face through the theme font roles. Bold, tight headlines with slight negative tracking. Sentence case everywhere except acronyms. Monospace only for code. |
 | Shape | Cards `--uds-radius-card`, nested items `--uds-radius-inner`, small marks `--uds-radius-small`, buttons, chips and tags `--uds-radius-pill`. Hairline borders at `--uds-border-width-standard`. Dividers are straight rules. |
 | Depth | `--uds-shadow-card` at rest, `--uds-shadow-hover` with a 2px lift on hover. Shadows are off in dark mode (the theme sets them to `none`). |
-| Color | Canvas and elevated surfaces from the theme. `--uds-color-action-primary` is the only accent: primary actions, active states, focus, the asterisk, small numbers. Never a large fill, never body text. |
+| Color | Canvas and elevated surfaces from the theme. `--uds-color-action-primary` is the only accent: primary actions, active states, focus, the asterisk. Small labels and numbers use text roles. Never a large fill, never body text. |
 | Mark | The asterisk. The kayak mark and JR monograms are retired. |
 | Voice in UI | Short, specific labels ("Read guide", "Get in touch"), never "Learn more". No em dashes. |
 
@@ -40,6 +40,7 @@ Modern, rounded, Apple-style. A neutral canvas in light and dark, white or graph
 
 - WCAG 2.2 AA, 44px minimum targets (`--uds-layout-touch-target-min`), a visible focus ring in `--uds-color-focus-ring`, one H1 per page.
 - The accent on the light canvas is roughly 3:1: large text and non-text marks only.
+- Primary control labels use `--uds-color-action-primaryText`. Check at least 4.5:1 against the action fill in every state. Do not darken the fill on hover without rechecking label contrast.
 - Body text at 16px or larger. Secondary text is for metadata and supporting copy.
 - Prose capped at `--uds-layout-reading-measure` and free to shrink on small screens.
 - Reduced motion turns off lifts, transitions and glass morphing.
