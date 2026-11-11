@@ -20,7 +20,12 @@
 - Motion timing/easing values beyond the minimal V0 contract.
 - Ownership, release cadence, and breaking-change policy.
 
-## Approved Jaden brand direction (2026-09-11)
+## Approved Jaden brand direction (2026-11-08, supersedes 2026-09-11)
+
+- `jadenraats-modern` is the approved default for Jaden-owned public sites, guides, and tools: modern rounded, Apple-style, light and dark, orange as the only accent, Liquid Glass only on floating chrome. Rules: docs/jadenraats-modern-brand-system.md.
+- The editorial-brutalist `jadenraats` theme is legacy. It stays valid for artifacts that are legacy by choice and is used only when Jaden asks for it by name. Never mix the two on one surface.
+
+## Earlier Jaden brand direction (2026-09-11, legacy)
 
 - The Jaden theme is the approved default for Jaden-owned public sites, guides, operational tools, and data-heavy interfaces.
 - Its visual direction is editorial-operational brutalism: hard modular grids, square controls, visible borders, dense useful information, and restrained handmade texture.
