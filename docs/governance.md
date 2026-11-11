@@ -27,7 +27,7 @@
 
 ## Earlier Jaden brand direction (2026-09-11, legacy)
 
-- The Jaden theme is the approved default for Jaden-owned public sites, guides, operational tools, and data-heavy interfaces.
+- At the time, the brutalist Jaden theme was the default for Jaden-owned public sites, guides, operational tools, and data-heavy interfaces. Since 2026-11-08 it is legacy and is used only by name.
 - Its visual direction is editorial-operational brutalism: hard modular grids, square controls, visible borders, dense useful information, and restrained handmade texture.
 - Project-specific campaign art, photographs, illustration, and handwritten annotations remain outside core. They belong in a consuming project's theme assets and content layer.
 - The semantic foundation supports that direction through theme-owned palette/type plus neutral structural tokens. Other project themes retain their own values.
