@@ -9,13 +9,16 @@
 <link rel="stylesheet" href="dist/themes/award-coatings.css">
 <link rel="stylesheet" href="dist/themes/leadbolt.css">
 <link rel="stylesheet" href="dist/themes/ai-ledger.css">
-<script>try{if(matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.dataset.udsMode='dark'}catch(e){}</script>
+<script>
+(function(){var mode=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{var saved=localStorage.getItem('uds-mode');if(saved==='dark'||saved==='light')mode=saved}catch(e){}document.documentElement.dataset.udsMode=mode})();
+</script>
 <style>
 *{box-sizing:border-box}
-html{background:var(--uds-surface-canvas);color-scheme:light dark}
+html{background:var(--uds-surface-canvas);color-scheme:light}
+html[data-uds-theme="jadenraats-modern"][data-uds-mode="dark"]{color-scheme:dark}
 body{margin:0;color:var(--uds-color-text-primary);background:var(--uds-surface-canvas);font-family:var(--uds-font-body);line-height:1.55}
 .wrap{max-width:1120px;margin:auto;padding:0 var(--uds-space-5)}
-header.glass{position:sticky;top:0;z-index:5;padding:var(--uds-space-3) 0;border-bottom:var(--uds-border-width-standard) solid var(--uds-color-border-subtle);background:color-mix(in srgb,var(--uds-surface-canvas) 72%,transparent);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px)}
+header.glass{position:sticky;top:0;z-index:5;padding:var(--uds-space-3) 0;border-bottom:var(--uds-border-width-standard) solid var(--uds-color-border-subtle);background:var(--uds-surface-canvas);background:color-mix(in srgb,var(--uds-surface-canvas) 72%,transparent);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px)}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){header.glass{background:var(--uds-surface-canvas)}}
 @media (prefers-reduced-transparency:reduce){header.glass{background:var(--uds-surface-canvas);backdrop-filter:none;-webkit-backdrop-filter:none}}
 @media (prefers-contrast:more){header.glass{background:var(--uds-surface-canvas);backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom-color:var(--uds-color-text-primary)}}
@@ -23,6 +26,7 @@ header.glass{position:sticky;top:0;z-index:5;padding:var(--uds-space-3) 0;border
 .mark{font-weight:700}.mark b{color:var(--uds-color-action-primary)}
 .controls{display:flex;gap:var(--uds-space-2);flex-wrap:wrap}
 select,.toggle{min-height:var(--uds-layout-touch-target-min);padding:0 var(--uds-space-4);font:inherit;font-size:15px;color:var(--uds-color-text-primary);background:var(--uds-surface-elevated);border:var(--uds-border-width-standard) solid var(--uds-color-border-subtle);border-radius:var(--uds-radius-pill,0);cursor:pointer}
+.toggle:disabled{cursor:default}
 .hero{padding:var(--uds-space-8) 0 var(--uds-space-6)}
 small{display:block;font-size:14px;color:var(--uds-color-text-secondary);margin-bottom:var(--uds-space-2)}
 h1{max-width:16ch;margin:0 0 var(--uds-space-4);font:700 clamp(2.4rem,7vw,4.5rem)/1.04 var(--uds-font-heading);letter-spacing:-0.025em}
@@ -32,7 +36,7 @@ p{max-width:var(--uds-layout-reading-measure);margin:0 0 var(--uds-space-4)}
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--uds-layout-grid-gap);padding-bottom:var(--uds-space-8)}
 .card{padding:var(--uds-space-5);background:var(--uds-surface-elevated);border:var(--uds-border-width-standard) solid var(--uds-color-border-subtle);border-radius:var(--uds-radius-card,0);box-shadow:var(--uds-shadow-card,none);transition:transform var(--uds-motion-duration-fast) var(--uds-motion-easing-standard),box-shadow var(--uds-motion-duration-fast) var(--uds-motion-easing-standard)}
 .card:hover{transform:translateY(-2px);box-shadow:var(--uds-shadow-hover,none)}
-.chip{display:inline-block;padding:4px 12px;font-size:14px;border:var(--uds-border-width-standard) solid var(--uds-color-border-subtle);border-radius:var(--uds-radius-pill,0);color:var(--uds-color-text-secondary)}
+.chip{display:inline-block;margin-bottom:var(--uds-space-2);padding:4px 12px;font-size:14px;border:var(--uds-border-width-standard) solid var(--uds-color-border-subtle);border-radius:var(--uds-radius-pill,0);color:var(--uds-color-text-secondary)}
 .btn{display:inline-flex;align-items:center;min-height:var(--uds-layout-touch-target-min);padding:0 var(--uds-space-5);border:0;border-radius:var(--uds-radius-pill,0);background:var(--uds-color-action-primary);color:var(--uds-color-action-primaryText);font:600 1rem var(--uds-font-body);cursor:pointer;text-decoration:none}
 a{color:var(--uds-color-action-text);text-underline-offset:.2em}
 :focus-visible{outline:2px solid var(--uds-color-focus-ring);outline-offset:3px}
@@ -57,7 +61,16 @@ footer{padding:var(--uds-space-6) 0;border-top:var(--uds-border-width-standard) 
 <footer><div class="wrap">Core tokens assign no brand palette. Dark mode applies to themes that define it.</div></footer>
 <script>
 var r=document.documentElement,m=document.getElementById('mode');
-function lbl(){m.textContent=r.dataset.udsMode==='dark'?'Light mode':'Dark mode'}lbl();
-document.getElementById('theme').addEventListener('change',function(e){r.dataset.udsTheme=e.target.value});
-m.addEventListener('click',function(){if(r.dataset.udsMode==='dark')delete r.dataset.udsMode;else r.dataset.udsMode='dark';lbl()});
+var preferredMode=r.dataset.udsMode||'light';
+function syncMode(){
+  var supportsDark=r.dataset.udsTheme==='jadenraats-modern';
+  r.dataset.udsMode=supportsDark?preferredMode:'light';
+  m.disabled=!supportsDark;
+  m.textContent=supportsDark?(preferredMode==='dark'?'Light mode':'Dark mode'):'Light only';
+  m.setAttribute('aria-label',supportsDark?'Dark mode':'Dark mode unavailable for this theme');
+  m.setAttribute('aria-pressed',String(supportsDark&&preferredMode==='dark'));
+}
+syncMode();
+document.getElementById('theme').addEventListener('change',function(e){r.dataset.udsTheme=e.target.value;syncMode()});
+m.addEventListener('click',function(){preferredMode=preferredMode==='dark'?'light':'dark';try{localStorage.setItem('uds-mode',preferredMode)}catch(e){}syncMode()});
 </script></body></html>
