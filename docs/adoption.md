@@ -8,11 +8,12 @@ Use this when a project starts consuming the Universal Design System. Do not cop
 - Load dist/uds.core.css first (semantic slots, spacing, motion).
 - Load one matching file from dist/themes.
 - Set data-uds-theme on html.
+- For modern dark mode, set `data-uds-mode="dark"` before first paint (`data-site-theme="dark"` is also supported). Light uses `light` or no mode attribute. Follow the system initially and persist an explicit choice.
 - Consume semantic custom properties, never another theme hex or RGB.
-- Load the theme font files separately. This repository names families; it does not host font files.
+- The modern theme uses installed system fonts. For other themes, load required font files separately; this repository does not host them.
 
 Load order: core stylesheet, then one theme stylesheet from dist/themes. Select the theme with data-uds-theme set to the theme id.
-- Duplicate an existing themes JSON for a fifth project and fill only approved semantic roles.
+- Pin core, theme JSON and CSS to the same merged commit, including the package lockfile. Duplicate an existing themes JSON for another project and fill only approved semantic roles.
 
 ## Implement components
 

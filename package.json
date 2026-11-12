@@ -1,11 +1,12 @@
 {
   "name": "@jadenraats/universal-design-system",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "private": true,
   "type": "module",
   "scripts": {
     "validate": "node scripts/validate-tokens.mjs",
     "export:css": "node scripts/export-css.mjs",
-    "check:contrast": "node scripts/check-modern-contrast.mjs"
+    "check:contrast": "node scripts/check-modern-contrast.mjs",
+    "check:consistency": "node scripts/check-consistency.mjs"
   }
 }

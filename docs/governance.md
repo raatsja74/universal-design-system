@@ -12,7 +12,11 @@
 - Foundation changes require review from every affected theme.
 - Theme-only changes may not silently change a universal semantic role.
 - A production project keeps its existing behavior when canonical guidance is unresolved.
-- Notion is the research and decision-log surface. This repository is the implementation contract.
+- This repository holds current implementation decisions. Archived Notion is historical research, not a current Jaden design authority (JD decision, 2026-10-24).
+
+## Consistency correction (2026-11-12)
+
+Problem: adoption and agent instructions still allowed mixed revisions and named archived Notion as current; the modern preview still said unreleased after PR #3 merged. Scope: documentation, preview status and regression checks only. Modern is the Jaden default, legacy is opt-in, and all theme values are preserved. Check generated CSS against its source and run existing contrast validation. Browser and accessibility coverage must be reported separately.
 
 ## Current open decisions
 
