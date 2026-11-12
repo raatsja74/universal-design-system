@@ -6,6 +6,8 @@ This repository is the canonical implementation contract for reusable foundation
 
 ## Rules
 
+- For Jaden-owned work, use `jadenraats-modern` by default. `jadenraats` is opt-in legacy; other project themes retain their own identities. Read `docs/jadenraats-modern-brand-system.md` and `docs/adoption.md`.
+- Use one merged revision for token JSON, core CSS and theme CSS. Current canonical documentation overrides stale bundled snapshots. Archived Notion is not a current Jaden design authority.
 - Use semantic token names in components; do not consume theme values directly unless authoring a theme.
 - Add a component only after a second real project/use case demonstrates reuse.
 - Every component change must define states, keyboard behavior, reduced-motion behavior, responsive behavior, and theme hooks.
@@ -15,6 +17,8 @@ This repository is the canonical implementation contract for reusable foundation
 ## Validation
 
 Run `npm run validate` after changing token JSON. It enforces required semantic roles, 4px spacing increments, and valid theme references.
+
+Run `npm run check:consistency` before regeneration to detect stale committed CSS, then `npm run validate` and `npm run check:contrast`. These source checks do not replace browser verification in both modes.
 
 
 ## Generated CSS

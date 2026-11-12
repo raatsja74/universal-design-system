@@ -1,9 +1,15 @@
-## Unreleased
+## 0.4.1 — 2026-11-12
+
+- Align adoption, agent instructions, raw artifact guidance and preview status around the current modern default and exact revision pins.
+- Remove archived Notion from current Jaden authority while retaining historical audit records.
+- Add generated-CSS and default-theme consistency checks; preserve all existing theme values.
+
+## Modern theme release — merged 2026-11-11 (808b457)
 
 - Make `jadenraats-modern` the documented default for Jaden-owned work; mark the brutalist `jadenraats` theme and its brand doc as legacy (README, governance, adoption).
 - Add docs/jadenraats-modern-brand-system.md: shape, depth, color, type, Liquid Glass placement and fallbacks, accessibility and audit rules for the modern theme.
 
-- Add opt-in `jadenraats-modern` light/dark theme, radius and shadow roles without replacing the legacy theme.
+- Add the current-default `jadenraats-modern` light/dark theme, radius and shadow roles without replacing the legacy theme.
 - Export theme shape, depth, border and dark-mode overrides from JSON.
 - Correct invalid reading measure `45-75ch` to a usable `75ch` maximum.
 

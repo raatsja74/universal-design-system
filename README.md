@@ -10,7 +10,7 @@ This system shares semantics and behavior, not brand identities. A theme may cha
 
 1. This repository: approved tokens, component contracts, release history.
 2. Project implementation: a theme current applied values and usage.
-3. Notion: research, visual references, open decisions, and build logs.
+3. Dated project decisions and approved reference material. Archived Notion is not a current Jaden design authority (JD decision, 2026-10-24).
 
 When sources conflict, do not silently choose. Open a decision in docs/governance.md and keep the existing production behavior until it is resolved.
 
@@ -36,13 +36,13 @@ Run the validate script in package.json. It checks JSON tokens and regenerates d
 
 ## Adopt a theme in a new project
 
-1. Depend on this repository locally. Do not flatten another project colors into your UI.
+1. Pin one merged repository commit in your dependency and lockfile. Load core, theme JSON and generated CSS from that same revision. Do not flatten another project's colors into your UI.
 2. Include dist/uds.core.css first, then one file from dist/themes/.
 3. Set data-uds-theme to jadenraats-modern, jadenraats (legacy), award-coatings, leadbolt, or ai-ledger on a parent element.
 4. Use semantic custom properties only, such as --uds-color-text-primary and --uds-surface-canvas.
 5. Follow components/button.md, components/text-link.md, and docs/adoption.md.
 
-To add a fifth project, duplicate an existing file in themes/, fill every approved semantic role and typography slot, then validate. Do not add unapproved color roles.
+To add another project, duplicate an existing file in themes/, fill every approved semantic role and typography slot, then validate. Do not add unapproved color roles.
 
 ## Generated CSS contract
 
@@ -60,13 +60,13 @@ Core never assigns a project palette as the default. Theme files are the only pl
 
 **Live:** https://raatsja74.github.io/universal-design-system/ opens the `jadenraats-modern` preview (`index.html`).
 
-`style-guide.html` is the human-readable reference for the legacy `jadenraats` theme: canonical palette, type, shape and border rules, component patterns, both known failure modes, and the legacy values that must not be reintroduced. It loads `dist/uds.core.css` then `dist/themes/jadenraats.css` , the same files a project consumes, so if the style guide renders correctly, the legacy theme is intact. The modern theme's reference is docs/jadenraats-modern-brand-system.md and the live jadenraats.com.
+`style-guide.html` is the human-readable reference for the legacy `jadenraats` theme. It loads `dist/uds.core.css` then `dist/themes/jadenraats.css`. Rendering that page is one check, not proof of full visual or accessibility coverage. The modern reference is `index.html` and docs/jadenraats-modern-brand-system.md.
 
 GitHub Pages is enabled from `main` at the branch root. `index.html` previews the default modern theme in light and dark and links to `style-guide.html`, the legacy reference. It is also readable locally by opening the file; no build step is required.
 
 ## Agent access
 
-Agents must fetch these values rather than restate them from memory or from an older build. Raw endpoints once Pages/repo access is live:
+Agents must fetch these values rather than restate them from memory or from an older build. These main-branch discovery links identify the current artifacts; replace `main` with the consuming project's exact merged commit when implementing or testing:
 
 | Artifact | Raw URL |
 | --- | --- |
