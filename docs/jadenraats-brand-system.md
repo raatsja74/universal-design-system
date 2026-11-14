@@ -79,8 +79,14 @@ Earlier builds each re-derived the brand from scratch or from screenshots, produ
 | Inter, JetBrains Mono (body) | IBM Plex Mono |
 | 999px pill radius, 16px card radius | `0px` — no exceptions |
 
-There is no separate "rounded / pill" mode for marketing surfaces. The approved direction is one system: 0px radius, hard borders, orange as the only strong accent.
+Within the legacy `jadenraats` theme, use 0px radius, hard borders, and orange as the only strong accent. The default `jadenraats-modern` theme has its own rounded shapes and depth rules.
 
-## Open items
+## Project-level art direction
 
-- **Inline emphasis face.** The live site loads Instrument Serif italic through `next/font` as `--font-serif` for single-phrase emphasis. It is used in production but is not yet an approved typography token in `themes/jadenraats.json`, so it is not exported in `dist/themes/jadenraats.css`. Either promote it to a token or stop using it — right now it is the one value an agent cannot fetch.
+Instrument Serif italic was used for single-phrase emphasis in the legacy site through `next/font` as `--font-serif`. It remains an explicit project-level override outside UDS. It is absent from `themes/jadenraats.json` and the generated theme CSS. Load it in a consuming legacy project only when that project's design calls for it. Modern surfaces use their theme font roles.
+
+Tape strips, rotated photo frames, and scrapbook or collage compositions also belong to the consuming project's composition and assets. They are legacy art direction, not reusable UDS tokens or required components. Keep decorative elements clear of text and controls, and preserve the mobile hero flow rule above.
+
+Promoting either treatment into UDS requires a separate governance proposal with evidence of reuse.
+
+*Updated by: Codex*

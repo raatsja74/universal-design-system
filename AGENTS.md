@@ -2,7 +2,30 @@
 
 ## Purpose
 
-This repository is the canonical implementation contract for reusable foundations. It is not a visual-brand replacement and it is not a dumping ground for one-off page styling.
+This repository is the canonical implementation contract for reusable design foundations shared across projects.
+
+It defines semantic tokens, theme and component contracts, accessibility requirements, spacing and layout foundations, interaction behavior, responsive behavior, and design-system governance.
+
+Keep the core stable and brand-neutral. Themes define each project's visual identity. Page composition and one-off art direction belong in consuming projects.
+
+## Core architecture
+
+```text
+UDS CORE
+├── semantic roles, spacing, and layout
+├── accessibility and interaction behavior
+└── component and responsive contracts
+      ↓
+THEME
+├── colors and typography
+├── imagery, texture, and brand marks
+└── visual expression
+      ↓
+PROJECT
+├── page composition and content
+├── project-specific features
+└── one-off art direction
+```
 
 ## Rules
 
@@ -24,3 +47,5 @@ Run `npm run check:consistency` before regeneration to detect stale committed CS
 ## Generated CSS
 
 Do not hand-edit dist/. Map only approved semantic roles in themes JSON. Core CSS must not ship a project palette as the default. The validate script regenerates dist/ from JSON.
+
+*Updated by: Codex*
